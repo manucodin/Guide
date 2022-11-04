@@ -17,15 +17,18 @@ jobs:
 
     steps:
     - name: Get Sources
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
+    
     - name: Setup Xcode
       uses: maxim-lobanov/setup-xcode@v1.4.0
       with:
         xcode-version: "14.1"
     - name: Build
       run: xcodebuild build -scheme Guide -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.1'
+    
     - name: Run tests
       run: xcodebuild test -scheme Guide -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.1' -enableCodeCoverage YES
+    
     - uses: sersoft-gmbh/swift-coverage-action@v3
       id: coverage-files
     - uses: codecov/codecov-action@v2
