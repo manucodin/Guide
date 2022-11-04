@@ -20,3 +20,8 @@ jobs:
       run: xcodebuild build -scheme Guide -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.1'
     - name: Run tests
       run: xcodebuild test -scheme Guide -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.1' -enableCodeCoverage YES
+    - uses: sersoft-gmbh/swift-coverage-action@v3
+      id: coverage-files
+    - uses: codecov/codecov-action@v2
+      with:
+        files: ${{join(fromJSON(steps.coverage-files.outputs.files), ',')}}
