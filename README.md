@@ -1,5 +1,5 @@
 # Guide
-[![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-Compatible-green?style=flat-square)](https://img.shields.io/badge/Swift%20Package%20Manager-Compatible-green?style=flat-square) [![iOS](https://img.shields.io/badge/Platform-iOS-blue?style=flat-square)](https://img.shields.io/badge/Platform-iOS-blue?style=flat-square)
+[![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-Compatible-green)](https://img.shields.io/badge/Swift%20Package%20Manager-Compatible-green) [![iOS](https://img.shields.io/badge/Platform-iOS-blue)](https://img.shields.io/badge/Platform-iOS-blue) [![Testing](https://github.com/manucodin/Guide/actions/workflows/swift.yml/badge.svg?branch=main)](https://github.com/manucodin/Guide/actions/workflows/swift.yml/badge.svg?branch=main) [![codecov](https://codecov.io/gh/manucodin/Guide/branch/main/graph/badge.svg?token=0FPFUD8PG3)](https://codecov.io/gh/manucodin/Guide)
 
 Guide is a easy and powerful library for opening locations or routes in the most popular iOS navigation apps
 ## Current Apps Supported
