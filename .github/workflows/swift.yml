@@ -28,6 +28,7 @@ jobs:
     
   testing:
     runs-on: macos-latest
+    needs: build
     steps:
     - name: Get Sources
       uses: actions/checkout@v3
@@ -41,6 +42,7 @@ jobs:
   
   codeCoverage:
     runs-on: macos-latest
+    needs: [build, testing]
     steps:
     - uses: sersoft-gmbh/swift-coverage-action@v3
       id: coverage-files
